@@ -16,6 +16,7 @@ class Program_work {
 	Smart_pointer inst;
 	std::string path;
 public:
+	Program_work();
 	bool Menu();
 	bool Search();
 	bool Print();

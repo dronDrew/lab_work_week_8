@@ -6,7 +6,6 @@
 using namespace std;
 
 int main() {
-	Smart_pointer a("fREANCIS");
-	cout << *a << endl;
+	Program_work k;
 	return 0;
 }
