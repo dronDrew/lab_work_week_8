@@ -140,17 +140,26 @@
   <ItemGroup>
     <ClInclude Include="dependies.h" />
     <ClInclude Include="fraction.h" />
+    <ClInclude Include="Html_validator.h" />
+    <ClInclude Include="mystring.h" />
     <ClInclude Include="Smart_pointer.h" />
     <ClInclude Include="student.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fraction.cpp" />
+    <ClCompile Include="Html_validator.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mystring.cpp" />
     <ClCompile Include="Smart_pointer.cpp" />
     <ClCompile Include="student.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Test_WEB_PAGE.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

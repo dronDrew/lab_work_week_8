@@ -1,5 +1,6 @@
 #pragma once
 #include "dependies.h"
+//LIST
 class List_position {
     struct element
     {
@@ -14,11 +15,12 @@ public:
     List_position();//done
     void Add(int position,int time_call=0,int time_change=0);//done
     void Delete_all();//done
-    void call_to_position(int position);
-    void change_position(int position);
-    void Show_statistic(int position);
+    void call_to_position(int position);//done
+    void change_position(int position);//done
     ~List_position();//done
 };
+
+//POINTER SMART
 class Smart_pointer
 {
     std::string* pointer;
@@ -33,7 +35,7 @@ public:
     ~Smart_pointer();
     std::string& operator *();
 };
-
+//PROGRAM
 class Program_work {
     Smart_pointer inst;
     List_position statistic;
