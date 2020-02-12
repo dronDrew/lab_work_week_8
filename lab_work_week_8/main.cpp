@@ -6,6 +6,10 @@
 using namespace std;
 
 int main() {
-	Program_work k;
+	//Program_work k;
+	//str_m b = "helllo";
+	//Smart_point_to_my_str a(b);
+	Html_validator k;
+	k.chack_html();
 	return 0;
 }

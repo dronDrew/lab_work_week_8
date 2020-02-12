@@ -25,16 +25,7 @@ str_m::str_m(int length) :str_m() {
 	st = nullptr;
 }
 str_m::str_m(const char* b) : str_m() {
-	if (this->leng > strlen(b)) {
-		st = new char[leng];
-		for (int j = 0; j < strlen(b); j++)
-		{
-			st[j] = b[j];
-		}
-		st[strlen(b)] = '\0';
-	}
-	else
-	{
+	
 		st = new char[strlen(b) + 1];
 		this->leng = strlen(b) + 1;
 		for (int j = 0; j < this->leng - 1; j++)
@@ -42,7 +33,6 @@ str_m::str_m(const char* b) : str_m() {
 			st[j] = b[j];
 		}
 		st[leng - 1] = '\0';
-	}
 }
 str_m::~str_m() {
 	delete[]this->st;
@@ -281,7 +271,7 @@ str_m::operator char* () {
 	while (this->st[count] != '\0') {
 		count++;
 	}
-	char* res = new char[count + 1];
+	char* res = new char[count+1];
 	for (int i = 0; i < count; i++)
 	{
 		res[i] = this->st[i];
@@ -313,4 +303,113 @@ int str_m::operator()(char& a) {
 		}
 	}
 	return -1;
+}
+
+std::ostream& operator<<(std::ostream& out, str_m& a) {
+	out << a.st;
+	return out;
+}
+std::istream& operator>>(std::istream& in, str_m& a) {
+	char* temp = new char[1000];
+	int i = 0;
+	while (in.get(temp[i]))
+	{
+		if (temp[i] == ' ' || temp[i] == '\n') {
+			break;
+		}
+		i++;
+	}
+	temp[i] = '\0';
+	a = temp;
+	delete[]temp;
+	return in;
+}
+void getline(std::istream& in, str_m& a) {
+	char* temp = new char[1000];
+	int i = 0;
+	while (in.get(temp[i]))
+	{
+		if (temp[i] == '\n') {
+			break;
+		}
+		i++;
+	}
+	temp[i] = '\0';
+	a = temp;
+	delete[]temp;
+
+}
+void getline(std::istream& in, str_m& a, char p) {
+	char* temp = new char[1000];
+	int i = 0;
+	while (in.get(temp[i]))
+	{
+		if (temp[i] == p) {
+			in.get(temp[i]);
+			i++;
+			break;
+		}
+		i++;
+	}
+	temp[i] = '\0';
+	a = temp;
+	delete[]temp;
+
+
+}
+void getline(std::istream& in, str_m& a, char from, char to) {
+	char t;
+	bool find_first = false;
+	int first_times = 0;
+	bool new_line = false;
+	bool find_last = false;
+	char* temp = new char[1000];
+	int i = 0;
+	while (in.get(t))
+	{
+		if (t=='\n')
+		{
+			new_line = true;
+
+			break;
+		}
+		if (t == from) {
+			find_first = true;
+			first_times++;
+		}
+		 if (first_times > 1 && t == from) {
+			break;
+		}
+		if (t == to&& find_first == false) {
+			find_last = true;
+			break;
+		}
+		if (find_first) {
+			temp[i] = t;
+			if (temp[i] == to) {
+				find_last = true;
+				in.get(t);
+				temp[i]=to;
+				i++;
+				break;
+			}
+			i++;
+		}
+	}
+//--------------------------------------------------
+	if (i==0 && new_line == true) {
+		temp[i] = '2';
+		i++;
+	}
+	if (find_first==false && find_last == true) {
+		temp[i] = '3';
+		i++;
+	}
+	temp[i] = '\0';
+
+	a = temp;
+	delete[]temp;
+}
+int  str_m::Get_lenght() {
+	return this->leng;
 }
