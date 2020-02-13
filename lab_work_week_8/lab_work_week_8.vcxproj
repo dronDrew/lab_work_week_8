@@ -142,6 +142,7 @@
     <ClInclude Include="fraction.h" />
     <ClInclude Include="Html_validator.h" />
     <ClInclude Include="mystring.h" />
+    <ClInclude Include="Rail_way_station_info.h" />
     <ClInclude Include="Smart_pointer.h" />
     <ClInclude Include="student.h" />
   </ItemGroup>
@@ -150,6 +151,7 @@
     <ClCompile Include="Html_validator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mystring.cpp" />
+    <ClCompile Include="Rail_way_station_info.cpp" />
     <ClCompile Include="Smart_pointer.cpp" />
     <ClCompile Include="student.cpp" />
   </ItemGroup>

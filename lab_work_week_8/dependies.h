@@ -4,4 +4,6 @@
 #include<string>
 #include<string.h>
 #include<Windows.h>
+#include <vector>
+#include<iterator>
 #define PRESICION 1000000
