@@ -1,0 +1,10 @@
+ cat кот
+ cake торт
+ brother брат
+ sister сестра
+ bread хлеб
+ дом house
+ мишь mouse
+ большой big
+ хороший good
+ плохой bad

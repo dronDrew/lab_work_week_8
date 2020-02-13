@@ -25,6 +25,8 @@ public:
 	str_m operator*(str_m& b);
 	str_m operator/(str_m& b);
 	bool operator==(const str_m& a);
+	bool operator==(const str_m *point);
+	bool operator==(const char * point);
 	bool operator!=(const str_m& a);
 	bool operator<(const str_m& a);
 	bool operator>(const str_m& a);

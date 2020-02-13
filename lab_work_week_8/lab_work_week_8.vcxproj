@@ -139,6 +139,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="dependies.h" />
+    <ClInclude Include="Dictionary_on_map.h" />
     <ClInclude Include="fraction.h" />
     <ClInclude Include="Html_validator.h" />
     <ClInclude Include="mystring.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="student.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Dictionary_on_map.cpp" />
     <ClCompile Include="fraction.cpp" />
     <ClCompile Include="Html_validator.cpp" />
     <ClCompile Include="main.cpp" />
@@ -156,6 +158,7 @@
     <ClCompile Include="student.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Dictionary_test.txt" />
     <Text Include="Text.txt" />
   </ItemGroup>
   <ItemGroup>
