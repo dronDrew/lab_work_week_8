@@ -4,9 +4,11 @@
 #include "Smart_pointer.h"
 #include "Html_validator.h"
 #include "Rail_way_station_info.h"
+#include "Dictionary_on_map.h"
 using namespace std;
 
 int main() {
+	setlocale(LC_ALL, "rus");
 	//Program_work k;
 	//str_m b = "helllo";
 	//Smart_point_to_my_str a(b);
@@ -22,5 +24,7 @@ int main() {
 	a.Search_train(j);
 	str_m q("Odessa");
 	a.Search_train(q);*/
+	Dictionary_on_map a;
+
 	return 0;
 }

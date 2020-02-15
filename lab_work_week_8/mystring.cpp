@@ -175,6 +175,9 @@ str_m& str_m::operator+=(std::string& a) {
 	}
 	return *this;
 }
+char** str_m::Get_adress() {
+	return &this->st;
+}
 str_m& str_m::operator+=(const str_m& a) {
 	int i{ 0 };
 	while (this->st[i] != '\0') {
@@ -220,6 +223,19 @@ bool str_m::operator<(const str_m& a) {
 		q++;
 	}
 	return z < q;
+}
+bool str_m::operator<(const int a) {
+	return this->st[0] < a;
+}
+bool str_m::operator<(const char a) {
+return this->st[0] < a;
+}
+bool str_m::operator>(const int a) {
+return this->st[0] > a;
+}
+bool str_m::operator>(const char a) {
+return 	this->st[0] > a;
+
 }
 bool str_m::operator>(const str_m& a) {
 	return !(*this < a);

@@ -25,10 +25,14 @@ public:
 	str_m operator*(str_m& b);
 	str_m operator/(str_m& b);
 	bool operator==(const str_m& a);
-	bool operator==(const str_m *point);
-	bool operator==(const char * point);
+	//bool operator==(const str_m *point);
+	//bool operator==(const char * point);
 	bool operator!=(const str_m& a);
 	bool operator<(const str_m& a);
+	bool operator<(const int a);
+	bool operator<(const char a);
+	bool operator>(const int a);
+	bool operator>(const char a);
 	bool operator>(const str_m& a);
 	bool operator<=(const str_m& a);
 	bool operator>=(const str_m& a);
@@ -41,6 +45,7 @@ public:
 	friend class Html_validator;
 	friend std::ostream& operator<<(std::ostream& out, str_m& a);
 	friend std::istream& operator>>(std::istream& in, str_m& a);
+	char** Get_adress();
 	
 };
 void getline(std::istream& in, str_m& a);
