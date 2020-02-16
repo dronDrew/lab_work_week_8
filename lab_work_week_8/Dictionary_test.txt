@@ -1,10 +1,13 @@
- cat кот
- cake торт
- brother брат
- sister сестра
- bread хлеб
- дом house
- мишь mouse
- большой big
- хороший good
- плохой bad
+bread хлеб
+brother брат
+cake торт
+cat кот
+circle круг
+sister сестра
+squer квадрат
+большой big
+дом house
+мишь mouse
+плохой bad
+триугольник triangle
+хороший good

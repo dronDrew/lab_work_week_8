@@ -10,7 +10,9 @@ public:
 	Dictionary_on_map();
 	bool Load_from_file();
 	bool Save_to_file();
+	bool Add_word(std::string word,std::string trans);
 	bool Search_word(std::string& a);
-
+	bool Edit_translation(std::string word, std::string new_translation);
+	bool Delete_word(std::string word);
 };
 

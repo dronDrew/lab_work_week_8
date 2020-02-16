@@ -25,6 +25,15 @@ int main() {
 	str_m q("Odessa");
 	a.Search_train(q);*/
 	Dictionary_on_map a;
-
+	a.Add_word("circle", "круг");
+	a.Add_word("squer", "квадрат");
+	a.Add_word("триугольник", "triangle");
+	a.Save_to_file();
+	std::string temp= "cake";
+	a.Search_word(temp);
+	temp = "хороший";
+	a.Search_word(temp);
+	a.Edit_translation("sister", "сестр");
+	a.Delete_word("sister");
 	return 0;
 }
